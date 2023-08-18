@@ -11,5 +11,6 @@ os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://downlo
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//special_tokens_map.json -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o special_tokens_map.json")
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//tokenizer.json -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o tokenizer.json")
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//tokenizer_config.json -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o tokenizer_config.json")
+os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//tokenizer.model -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o tokenizer.model")
 
 os.system(f"python server.py --share --model /home/xlab-app-center/text-generation-webui/models/medllama2_7b")
