@@ -13,5 +13,5 @@ os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://downlo
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//tokenizer_config.json -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o tokenizer_config.json")
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//tokenizer.model -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o tokenizer.model")
 
-os.system(f"sed -i 's/TheEncrypted777/wpp/g' /home/xlab-app-center/text-generation-webui/settings-template.yaml")
+os.system(f"sed -i 's/TheEncrypted777/wpp/g' /home/xlab-app-center/text-generation-webui/modules/shared.py")
 os.system(f"python server.py --multi-user --model /home/xlab-app-center/text-generation-webui/models/medllama2_7b")
