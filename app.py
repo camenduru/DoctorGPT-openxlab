@@ -13,6 +13,7 @@ os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://downlo
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//tokenizer_config.json -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o tokenizer_config.json")
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://download.openxlab.org.cn/models/camenduru/medllama2_7b/weight//tokenizer.model -d /home/xlab-app-center/text-generation-webui/models/medllama2_7b -o tokenizer.model")
 
+os.system(f"sed -i -e '/gr.Blocks/r /home/xlab-app-center/header.py' /home/xlab-app-center/text-generation-webui/server.py")
 os.system(f"sed -i '/def create_ui():/a\  with gr.Box(visible=False):' /home/xlab-app-center/text-generation-webui/modules/ui_default.py")
 os.system(f"sed -i '/def create_ui():/a\  with gr.Box(visible=False):' /home/xlab-app-center/text-generation-webui/modules/ui_model_menu.py")
 os.system(f"sed -i '/def create_ui():/a\  with gr.Box(visible=False):' /home/xlab-app-center/text-generation-webui/modules/ui_notebook.py")
