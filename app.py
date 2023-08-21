@@ -22,6 +22,6 @@ os.system(f"sed -i '/def create_ui(default_preset):/a\  with gr.Box(visible=Fals
 os.system(f"sed -i '/def create_ui():/a\  with gr.Box(visible=False):' /home/xlab-app-center/text-generation-webui/modules/ui_session.py")
 os.system(f"sed -i '/def create_ui():/a\  with gr.Box(visible=False):' /home/xlab-app-center/text-generation-webui/modules/training.py")
 os.system(f"sed -i 's/TheEncrypted777/wpp/g' /home/xlab-app-center/text-generation-webui/modules/shared.py")
-os.system(f"sed -i '43,44d' /home/xlab-app-center/text-generation-webui/modules/block_requests.py")
+# os.system(f"sed -i '43,44d' /home/xlab-app-center/text-generation-webui/modules/block_requests.py")
 
 os.system(f"python server.py --multi-user --model /home/xlab-app-center/text-generation-webui/models/medllama2_7b")
